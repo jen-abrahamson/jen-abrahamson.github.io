@@ -5,3 +5,4 @@ https://jen-abrahamson.github.io/
 Website Template From: 
 https://html5up.net/hyperspace
 
+*Note: the website is in a work in progress state*
