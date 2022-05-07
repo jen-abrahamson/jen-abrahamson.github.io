@@ -3,6 +3,5 @@ This repository contains code used to create and host my personal website to dis
 https://jen-abrahamson.github.io/
 
 Website Template From: 
-
 https://html5up.net/hyperspace
 
