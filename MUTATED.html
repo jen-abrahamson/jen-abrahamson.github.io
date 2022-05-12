@@ -39,7 +39,28 @@
 							(<a href="https://www.iarpa.gov/research-programs/smart" class="title">SMART</a>) Program working to automate broad-area 
 							search of multi-source satellite imagery to detect, monitor, and characterize the progression of anthropogenic or 
 							natural processes.
+							
+							<br>
+							<br>
+							
+							To address this goal, our team has been working extensively on the development of a novel change detection algorithm.  
+							This algorithm, termed <strong>roboBayes</strong>, was based on the established Bayesian Online Changepoint
+							Detection Algorithm (BOCPD, <a href="https://arxiv.org/abs/0710.3742" class="title">Adams and MacKay 2007</a>) but created
+							and implemented specifically for remote sensing change detection by team member Laura Wendelberger 
+							(<a href="https://arxiv.org/abs/2112.12899?context=stat" class="title">Wendelberger et. al 2021</a>).  My work on this
+							algorithm is outlined below:
+							
+							<br>
 							</p>
+						
+							<h2> Outlier Detection </h2>
+							<p> To help address the issue of outliers in our data, due to clouds or other sources of atmospheric interference, I implemented
+							    two different spike filter options in the pre-processing portion of the roboBayes pipeline.  The first, is a lagging spike filter
+							    which uses a moving window of the previous values compared to the next data observation in order to flag a spike, or outlier, 
+						            that is outside of a set standard deviation threshold.  The second spike filter, is a traditional moving window spike filter
+							    where the moving window looks at the center data point of the window and flags a spike, or outlier, that is outside of a set standard
+							    deviation threshold.  
+							<center><a href="#" class="image"><img src="images/Outlier.png" alt="" width=800 height=200 /></a></center>
 
 						</div>
 					</section>
