@@ -75,12 +75,29 @@
 							    classification to create a parameter filter that improved our precision across regions while still maintaining high levels
 							    of recall.
 							<br>
+							</p>
 								
 							<figure>
 								<center><a href="#" class="image"><img src="images/Filter.png" alt="" width=700 height=425 /></a></center>
 								<figcaption><i>This image shows for two construction change sites (annotated in red) how patterns emerge in the spectral 
 									model values for identified change pixels.  This information was used to build parameter filters targeted at 
 									classifying construction from other types of change.</i></figcaption>
+							</figure>
+							<br>
+							<br>
+						
+							<h2> Tuning: Paramter Grid Search </h2>
+							<p> To tune the roboBayes algorithm and find the best parameter set, I performed a grid search and set of tuning runs
+							    for the spike filter and between the spike filter and observation variance.  This was performed across multiple
+							    regions and geographic terrains to try and find the best generalizable parameter set.  Runs were completed using
+							    the NCSU High-Performance Computing (HPC) cluster.
+							<br>
+							</p>
+								
+							<figure>
+								<center><a href="#" class="image"><img src="images/Tune.gif" alt="" width=700 height=400 /></a></center>
+								<figcaption><i>This animation shows a set of 12 tuning runs performed for change detection
+										results for the island of Bahrain.</i></figcaption>
 							</figure>
 							   
 						</div>
