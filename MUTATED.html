@@ -43,7 +43,7 @@
 							<br>
 							<br>
 							
-							To address this goal, our team has been working extensively on the development of a novel change detection algorithm.  
+							To address this goal, our team has been working extensively on the development of a novel online change detection algorithm.  
 							This algorithm, termed <strong>roboBayes</strong>, was based on the established Bayesian Online Changepoint
 							Detection Algorithm (BOCPD, <a href="https://arxiv.org/abs/0710.3742" class="title">Adams and MacKay 2007</a>) but created
 							and implemented specifically for remote sensing change detection by team member Laura Wendelberger 
@@ -59,9 +59,20 @@
 							    which uses a moving window of the previous values compared to the next data observation in order to flag a spike, or outlier, 
 						            that is outside of a set standard deviation threshold.  The second spike filter, is a traditional moving window spike filter
 							    where the moving window looks at the center data point of the window and flags a spike, or outlier, that is outside of a set standard
-							    deviation threshold.  
+							    deviation threshold. 
+							</p>
 							<center><a href="#" class="image"><img src="images/Outlier.png" alt="" width=500 height=425 /></a></center>
 
+							<h2> Heuristics-Based Filtering </h2>
+							<p> To aid in eliminating false positives and classifying changes related to heavy construction, I developed a heuristics-based 
+							    filter in the post-processing portion of the roboBayes pipeline.  To determine what remote sensing signals and model 
+							    coefficients were indicative of heavy construction, I performed unsupervised K-means clustering of all
+							    model coefficients across multiple regions for all signals that contained a change point.  These coefficients included the model mean, 
+							    amplitude, and variance for each signal.  This helped me to target signals that were most important for heavy construction 
+							    classification to create a parameter filter that improved our precision across regions while still maintaining high levels
+							    of recall.
+							<center><a href="#" class="image"><img src="images/Filter.png" alt="" width=600 height=400 /></a></center>
+							   
 						</div>
 					</section>
 
